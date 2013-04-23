@@ -1,0 +1,115 @@
+//= require bootstrap
+//= require_self
+//= require_tree .
+
+@import 'compass'
+@import 'susy'
+@import 'flat-ui'
+
+$total-columns: 12
+$column-width: 5em
+$gutter-width: 1em
+$grid-padding: $gutter-width
+
+body
+  background-color: $lightgray
+  padding: 1em 3em
+  +container
+
+.left-column
+  +span-columns(4, 12)
+
+.right-column
+  +span-columns(8 omega, 12)
+
+.feeds-view
+  background-color: $base
+  color: $inverse
+  background-color: scale-color($base, $lightness: -15%)
+  border-radius: 8px 8px 6px 6px
+  color: scale-color($base, $lightness: 33%)
+
+  a
+    text-decoration: none
+
+
+  header
+    position: relative
+
+  a.new
+    position: absolute
+    top: 22px
+    right: 25px
+
+
+  .name
+    color: $inverse
+    font-size: 18px
+    font-weight: 700
+
+  h3
+    font-size: 16px
+    line-height: 1.2
+    padding: 18px 25px
+    color: $inverse
+
+  ul
+    margin: 0
+    list-style-type: none
+
+  li
+    a
+      color: inherit
+    background-color: $base
+    cursor: pointer
+    margin-top: 2px
+    padding: 18px 25px
+    position: relative
+    +transition(.25s)
+    &:first-of-type
+      margin-top: 0
+    &:last-of-type
+      border-radius: 0 0 6px 6px
+      padding-bottom: 18px
+
+.feeds-new-view
+  background-color: #fff
+  border-radius: 8px 8px 6px 6px
+  padding: 18px 25px
+  +clearfix
+
+  input[type="text"]
+    width: 240px
+
+  button
+    float: right
+
+.feed-index-view
+  +clearfix
+  background-color: #fff
+  border-radius: 8px 8px 6px 6px
+
+  header
+    padding: 18px 25px
+
+  ul
+    margin: 0
+    +reset-list-style
+
+    li
+      padding: 8px 25px
+      a
+        color: inherit
+        text-decoration: none
+
+      h4
+        font-weight: 700
+
+      .snippet
+        color: $gray
+
+.feed-item-view
+  +clearfix
+  padding: 18px 25px
+  background-color: #fff
+  border-radius: 8px 8px 6px 6px
