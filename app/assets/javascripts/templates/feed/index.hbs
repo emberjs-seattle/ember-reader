@@ -1,6 +1,7 @@
 <div class="feed-index-view">
   <header>
     <h3>{{name}}</h3>
+    {{#linkTo feed.edit class="edit"}}<span class="fui-new-24"></span>{{/linkTo}}
   </header>
   <ul>
     {{#each item in feedItems}}

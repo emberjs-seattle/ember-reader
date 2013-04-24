@@ -1,7 +1,7 @@
-App.FeedsNewRoute = Ember.Route.extend({
+App.FeedEditRoute = Ember.Route.extend({
 
   model: function() {
-    return App.Feed.createRecord();
+    return this.modelFor('feed');
   },
 
   exit: function() {

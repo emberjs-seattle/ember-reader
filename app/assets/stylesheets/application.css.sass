@@ -38,8 +38,9 @@ body
 
   a.new
     position: absolute
-    top: 22px
+    top: 19px
     right: 25px
+    font-size: 16px
 
 
   .name
@@ -72,7 +73,7 @@ body
       border-radius: 0 0 6px 6px
       padding-bottom: 18px
 
-.feeds-new-view
+.feeds-new-view, .feed-edit-view
   background-color: #fff
   border-radius: 8px 8px 6px 6px
   padding: 18px 25px
@@ -81,8 +82,9 @@ body
   input[type="text"]
     width: 240px
 
-  button
+  button, a
     float: right
+    margin-left: 8px
 
 .feed-index-view
   +clearfix
@@ -91,6 +93,16 @@ body
 
   header
     padding: 18px 25px
+    position: relative
+    .edit
+      position: absolute
+      top: 18px + 7px
+      right: 25px + 7px
+      font-size: 24px
+      color: $gray
+
+      text-decoration: none
+
 
   ul
     margin: 0
