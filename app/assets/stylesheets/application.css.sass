@@ -59,19 +59,44 @@ body
     list-style-type: none
 
   li
-    a
+    > a
       color: inherit
+      padding: 18px 25px
+      display: block
+      position: relative
+
+      &:hover
+        background-color: lighten($base, 5%)
+
+        &.active
+          &:after
+            border-left-color: lighten($base, 5%)
+
+      &.active
+        &:after
+          border: solid transparent
+          content: " "
+          height: 0
+          width: 0
+          position: absolute
+          pointer-events: none
+          border-left-color: $base
+          border-width: 10px
+          top: 27px
+          right: -20px
+
     background-color: $base
     cursor: pointer
     margin-top: 2px
-    padding: 18px 25px
     position: relative
     +transition(.25s)
     &:first-of-type
       margin-top: 0
     &:last-of-type
       border-radius: 0 0 6px 6px
-      padding-bottom: 18px
+      > a
+        border-radius: 0 0 6px 6px
+        padding-bottom: 18px
 
 .feeds-new-view, .feed-edit-view
   background-color: #fff
@@ -110,10 +135,15 @@ body
 
     li
       position: relative
-      padding: 8px 25px
-      a
+      > a
         color: inherit
         text-decoration: none
+        padding: 8px 25px
+        display: block
+        position: relative
+
+        &:hover
+          background-color: lighten($lightgray, 1%)
 
       h4
         font-weight: 700
