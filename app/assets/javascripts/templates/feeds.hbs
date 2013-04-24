@@ -7,8 +7,10 @@
     <ul>
       {{#each feed in this}}
         <li>
-          <div class="name">{{feed.name}}</div>
-          <div class="url">{{feed.url}}</div>
+          {{#linkTo feed.index feed}}
+            <div class="name">{{feed.name}}</div>
+            <div class="url">{{feed.url}}</div>
+          {{/linkTo}}
         </li>
       {{/each}}
     </ul>

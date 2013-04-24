@@ -1,0 +1,14 @@
+<div class="feed-index-view">
+  <header>
+    <h3>{{name}}</h3>
+  </header>
+  <ul>
+    {{#each item in feedItems}}
+      <li>
+        <h4>{{item.title}}</h4>
+        <p class="snippet">{{item.contentSnippet}}</p>
+      </li>
+    {{/each}}
+  </ul>
+
+</div>
