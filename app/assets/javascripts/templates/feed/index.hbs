@@ -5,8 +5,10 @@
   <ul>
     {{#each item in feedItems}}
       <li>
-        <h4>{{item.title}}</h4>
-        <p class="snippet">{{item.contentSnippet}}</p>
+        {{#linkTo feed_item item}}
+          <h4>{{item.title}}</h4>
+          <p class="snippet">{{item.bodySnippet}}</p>
+        {{/linkTo}}
       </li>
     {{/each}}
   </ul>

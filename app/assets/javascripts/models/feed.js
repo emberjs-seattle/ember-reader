@@ -13,15 +13,20 @@ App.Feed = DS.Model.extend({
       context: this,
       success: function(data) {
         var feed = data.responseData.feed;
-        var transaction = this.get('store').transaction();
         var items = feed.entries.forEach(function(entry) {
           if(this.get('feedItems').findProperty('link', entry.link)) {
             return;
           }
-          Ember.merge(entry, {feed: this})
-          var feedItem = transaction.createRecord(App.FeedItem, entry);
+          var feedItem = this.get('feedItems').createRecord({
+            title: entry.title,
+            author: entry.author,
+            body: entry.content,
+            bodySnippet: entry.contentSnippet,
+            link: entry.link,
+            publishedDate: entry.publishedDate
+          });
         }, this);
-        transaction.commit();
+        this.get('store').commit();
       }
     });
   }
