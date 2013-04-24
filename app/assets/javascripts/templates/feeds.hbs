@@ -1,17 +1,15 @@
 <div class="left-column">
   <div class="feeds-view">
     <header>
-      <h3>Feeds</h3>
+      <h3>Feeds ({{length}})</h3>
     </header>
     <ul>
-      <li>
-        <div class="name">CodeBrief</div>
-        <div class="url">http://codebrief.com/atom.xml</div>
-      </li>
-      <li>
-        <div class="name">GroupTalent Blog</div>
-        <div class="url">https://grouptalent.com/blog/feed.xml</div>
-      </li>
+      {{#each feed in this}}
+        <li>
+          <div class="name">{{feed.name}}</div>
+          <div class="url">{{feed.url}}</div>
+        </li>
+      {{/each}}
     </ul>
   </div>
 </div>
