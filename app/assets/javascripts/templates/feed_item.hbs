@@ -1,5 +1,12 @@
 <div class="feed-item-view">
-  <h1>{{title}}</h1>
+  <header>
+    <h1>{{title}}</h1>
+    <div class="meta">
+      {{#if author}}
+        <span class="author">{{author}}</span> -
+      {{/if}}
+      <span class="date">{{fromNow publishedAt}}</span>
+    </div>
 
   {{{body}}}
 </div>

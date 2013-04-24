@@ -97,6 +97,7 @@ body
     +reset-list-style
 
     li
+      position: relative
       padding: 8px 25px
       a
         color: inherit
@@ -106,10 +107,22 @@ body
         font-weight: 700
 
       .snippet
+        font-weight: 400
+
+      .date
+        position: absolute
+        top: 8px
+        right: 25px
         color: $gray
+
 
 .feed-item-view
   +clearfix
   padding: 18px 25px
   background-color: #fff
   border-radius: 8px 8px 6px 6px
+
+  .meta
+    margin-top: -8px
+    margin-bottom: 16px
+    color: $gray

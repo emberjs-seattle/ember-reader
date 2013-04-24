@@ -1,4 +1,5 @@
 //= require jquery
+//= require moment
 //= require handlebars.runtime
 //= require ember
 //= require ember-data.latest

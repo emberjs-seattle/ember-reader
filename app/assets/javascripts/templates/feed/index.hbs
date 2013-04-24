@@ -8,6 +8,7 @@
         {{#linkTo feed_item item}}
           <h4>{{item.title}}</h4>
           <p class="snippet">{{item.bodySnippet}}</p>
+          <div class="date">{{fromNow item.publishedDate}}</div>
         {{/linkTo}}
       </li>
     {{/each}}
