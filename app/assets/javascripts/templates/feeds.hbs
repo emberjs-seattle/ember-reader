@@ -2,6 +2,7 @@
   <div class="feeds-view">
     <header>
       <h3>Feeds ({{length}})</h3>
+      {{#linkTo feeds.new class="new"}}<span class="fui-plus-24"></span>{{/linkTo}}
     </header>
     <ul>
       {{#each feed in this}}
@@ -12,4 +13,8 @@
       {{/each}}
     </ul>
   </div>
+</div>
+
+<div class="right-column">
+  {{outlet}}
 </div>

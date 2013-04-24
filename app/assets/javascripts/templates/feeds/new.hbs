@@ -1,0 +1,10 @@
+<div class="feeds-new-view">
+
+  <h3>New Feed</h3>
+
+  <label>Name: <br>{{view Ember.TextField valueBinding="name"}}</label>
+  <label>Url: <br>{{view Ember.TextField valueBinding="url"}}</label>
+
+  <button {{action save}} class="btn btn-primary btn-large">Save</button>
+
+</div>

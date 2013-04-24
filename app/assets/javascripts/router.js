@@ -1,3 +1,5 @@
 App.Router.map(function() {
-  this.resource('feeds', {path: '/'});
+  this.resource('feeds', {path: '/'}, function() {
+    this.route('new');
+  });
 });
