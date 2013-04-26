@@ -1,6 +1,6 @@
 # Ember Reader
 
-Ember Reader is a simple RSS reader built with Ember.js and Ember-Data. It was created for [this presentation](http://emberjs-seattle.github.io/ember-reader-preso) ([video here](http://youtu.be/nO1hxT9GBTs)). It follows a branching convention that closely follows the structure of the presentation:
+Ember Reader is a simple RSS reader built with Ember.js and Ember-Data. It was created for [this presentation](http://emberjs-seattle.github.io/ember-reader-preso) ([video here](http://youtu.be/obaWh8xL2C0)). It follows a branching convention that closely follows the structure of the presentation:
 
 ```
  ember-reader git:(master) git branch
